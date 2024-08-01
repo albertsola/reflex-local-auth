@@ -1,6 +1,6 @@
 from . import pages
 from . import routes
-from .local_auth import LocalAuthState
+from .local_auth_state import LocalAuthState
 from .login import require_login, LoginState
 from .registration import RegistrationState
 from .routes import set_login_route, set_register_route

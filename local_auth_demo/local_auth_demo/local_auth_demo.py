@@ -62,6 +62,7 @@ class ProtectedState(reflex_local_auth.LocalAuthState):
     data: str
 
     def on_load(self):
+        print(self.router.headers.user_agent)
         if not self.is_authenticated:
             return reflex_local_auth.LoginState.redir
         self.data = f"This is truly private data for {self.authenticated_user.username}"
